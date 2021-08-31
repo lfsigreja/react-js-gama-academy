@@ -4,7 +4,7 @@ import { BrowserRouter, Switch, Route } from "react-router-dom"
 import Home from "./views/Home"
 import Contact from "./views/Contact/index"
 import SignIn from "./views/SignIn";
-import SingUp from "./views/SingUp";
+import SignUp from "./views/SignUp";
 
 const Routes: React.FC = () => {
   return (
@@ -12,8 +12,8 @@ const Routes: React.FC = () => {
         <Switch>
             <Route path="/" exact component={Home} />
             <Route path="/contact" component={Contact} />
-            <Route path="/singin" component={SignIn} />
-            <Route path="/singup" component={SingUp} />
+            <Route path="/signin" component={SignIn} />
+            <Route path="/signup" component={SignUp} />
         </Switch>
     </BrowserRouter>
   );
