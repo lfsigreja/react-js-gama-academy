@@ -1,6 +1,7 @@
 import React, { useCallback, useState, FormEvent } from 'react';
-import { useHistory } from 'react-router-dom';
+import { Link, useHistory } from 'react-router-dom';
 import { toast } from 'react-toastify'
+import Loader from '../../components/Loader';
 import { api } from '../../services/api';
 
 import { Container } from './style';
@@ -40,12 +41,8 @@ const SignUp: React.FC = () => {
     }, [data, history])
 
     if(load) {
-        return(
-            <div>
-                <h1>Aguarde, carregando.</h1>
-            </div>
-        )
-    }
+        return <Loader />
+      }
 
     return (
         <Container>
@@ -64,6 +61,7 @@ const SignUp: React.FC = () => {
                         placeholder="Senha" onChange={e => setData({ ...data, password: e.target.value })} />
                     <input type="submit" value="Cadastrar" />
                 </form>
+                <Link to="/signin">Já possuí conta? Clique aqui.</Link>
             </div>
         </Container>
 

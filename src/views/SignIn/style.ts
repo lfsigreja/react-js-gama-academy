@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const Container = styled.div`
-  display: flex;
+    display: flex;
   align-items: center;
   justify-content: center;
   background: #8c52e5;
@@ -43,6 +43,7 @@ export const Container = styled.div`
               padding: 0 5px 0 5px;
           }
           input[type="submit"]{
+              font-weight: 700;
               cursor: pointer;
               border: 1px solid #e2e2e2e2;
               background: #68de5a;
@@ -51,6 +52,7 @@ export const Container = styled.div`
               transition: 0.6s;
               &:hover{
                   background-color: #8c52e5;
+                  color: #f9f9f9f9
               }
           }
       }
