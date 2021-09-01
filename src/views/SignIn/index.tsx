@@ -5,6 +5,8 @@ import { toast } from 'react-toastify'
 import { api } from '../../services/api';
 import { Container } from './style';
 import Loader from '../../components/Loader'
+import  Nav from '../../components/Nav/index';
+import Footer from '../../components/footer';
 
 interface IData {
   email: string;
@@ -41,6 +43,8 @@ const SignIn: React.FC = () => {
   }
 
   return (
+    <>
+    <Nav />
     <Container>
       <div className="card">
         <h5>Faça o seu login!</h5>
@@ -56,6 +60,8 @@ const SignIn: React.FC = () => {
         <Link to="/signup">Clique aqui para cadastrar</Link>
       </div>
     </Container>
+    <Footer />
+    </>
   )
 }
 
